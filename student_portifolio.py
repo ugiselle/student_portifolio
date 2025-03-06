@@ -50,7 +50,7 @@ if page == "Home":
     st.write(f"🎓 *University:* {profile_data['university']}")
 
     # Resume download button
-    if os.path.exists(profile_data[" Resume_path"]):
+    if os.path.exists(profile_data["resume_path"]):
         with open(profile_data["resume_path"], "rb") as file:
             resume_bytes = file.read()
         st.download_button(label="📄 Download Resume", data=resume_bytes, file_name="resume.pdf", mime="application/pdf")
@@ -156,6 +156,18 @@ elif page == "Settings":
         profile_data["about_me"] = about_me
         save_profile_data(profile_data)
         st.success("Profile updated successfully!")
+elif page == "Timeline":
+    st.title("⏳ Timeline of Academic & Project Milestones")
+    
+    timeline = [
+        "✅ Year 1: First project completed",
+        "🏆 Year 2: Hackathon participation",
+        "💼 Year 3: Internship experience",
+        "📕 Year 4: Dissertation submission"
+    ]
+    
+    for event in timeline:
+        st.write(event)  # Ensure standard indentation and no hidden characters
 
 # Contact section
 elif page == "Contact":
