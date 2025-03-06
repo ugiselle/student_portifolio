@@ -46,12 +46,12 @@ if page == "Home":
     st.write(f"🎓 *University:* {profile_data['university']}")
 
     # Resume download button
-    if os.path.exists(profile_data["resume_path"]):
-        with open(profile_data["resume_path"], "rb") as file:
-            resume_bytes = file.read()
-        st.download_button(label="📄 Download Resume", data=resume_bytes, file_name="Resume.pdf", mime="application/pdf")
-    else:
-        st.warning("⚠ Resume file not found. Please upload your resume.")
+   # Resume download button
+    with open("resume.pdf", "rb") as file:
+        resume_bytes = file.read()
+    st.download_button(label="📄 Download Resume", data=resume_bytes, file_name="resume.pdf", mime="application/pdf")
+    
+    st.markdown("---")
 
     st.markdown("---")
     st.subheader("About Me")
