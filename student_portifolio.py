@@ -47,9 +47,9 @@ if page == "Home":
 
     # Resume download button
    # Resume download button
-    with open("resume.pdf", "rb") as file:
+    with open("Resume.pdf", "rb") as file:
         resume_bytes = file.read()
-    st.download_button(label="📄 Download Resume", data=resume_bytes, file_name="resume.pdf", mime="application/pdf")
+    st.download_button(label="📄 Download Resume", data=resume_bytes, file_name="Resume.pdf", mime="application/pdf")
     
     st.markdown("---")
 
