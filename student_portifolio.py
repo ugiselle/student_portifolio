@@ -47,7 +47,7 @@ if page == "Home":
     if os.path.exists(profile_data["resume_path"]):
         with open(profile_data["resume_path"], "rb") as file:
             resume_bytes = file.read()
-        st.download_button(label="📄 Download Resume", data=resume_bytes, file_name="resume.pdf", mime="application/pdf")
+        st.download_button(label="📄 Download Resume", data=resume_bytes, file_name="Resume.pdf", mime="application/pdf")
     else:
         st.warning("⚠ Resume file not found. Please upload your resume.")
 
