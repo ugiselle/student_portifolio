@@ -35,6 +35,8 @@ page = st.sidebar.radio("Go To:", ["Home", "Projects","Timeline","Testimonial", 
 # Home section
 if page == "Home":
     st.title("🎓 Student Portfolio")
+
+    
     st.image("img_girl.jpg", width=100, caption="Default Image")
 
     # Display student details
